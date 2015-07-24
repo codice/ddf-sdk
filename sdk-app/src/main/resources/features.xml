@@ -1,0 +1,34 @@
+<!--
+/**
+ * Copyright (c) Codice Foundation
+ *
+ * This is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either
+ * version 3 of the License, or any later version. 
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details. A copy of the GNU Lesser General Public License is distributed along with this program and can be found at
+ * <http://www.gnu.org/licenses/lgpl.html>.
+ *
+ **/
+ -->
+<features name="${project.artifactId}-${project.version}">
+
+    <feature name="sdk-metrics" version="${project.version}" install="manual"
+             description="SDK sample metrics.">
+        <bundle>mvn:ddf.sdk/sample-metrics/${project.version}</bundle>
+    </feature>
+
+    <feature name="sdk-soap" version="${project.version}" install="manual"
+             description="SDK sample soap endpoint.">
+        <bundle>mvn:ddf.sdk/sample-soap-endpoint/${project.version}</bundle>
+    </feature>
+
+    <feature name="sdk-app" version="${project.version}" description="SDK app.">
+        <feature>security-expansion</feature>
+        <feature>security-pep-serviceauthz</feature>
+        <feature>security-pep-user-attributes</feature>
+        <feature>security-pep-metacard-attributes</feature>
+        <feature>sdk-soap</feature>
+    </feature>
+
+</features>
