@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>sample-transformers</artifactId>
-        <groupId>ddf.distribution</groupId>
+        <groupId>org.codice</groupId>
         <version>2.18.0</version>
     </parent>
     <properties>
@@ -49,17 +49,17 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-ext</artifactId>
-            <version>${org.slf4j.version}</version>
+            <version>1.7.1</version>
         </dependency>
         <dependency>
             <groupId>org.codice.thirdparty</groupId>
             <artifactId>tika-bundle</artifactId>
-            <version>${tika.thirdparty.bundle.version}</version>
+            <version>1.18.0_5</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>${logback.classic.version}</version>
+            <version>1.2.3</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -81,10 +81,6 @@
                         </Export-Package>
                     </instructions>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
