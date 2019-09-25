@@ -58,6 +58,11 @@
         <directory-maven-plugin.version>0.3.1</directory-maven-plugin.version>
         <dependency-check-maven.version>3.1.1</dependency-check-maven.version>
         <maven-jacoco-plugin.version>0.8.2</maven-jacoco-plugin.version>
+
+        <!-- Command line argument properties for the maven-surefire-plugin -->
+        <surefire.argline.append />
+        <surefire.argline>${jacoco.argline} ${surefire.argline.append} -Xmx1024m -Djava.awt.headless=true -noverify</surefire.argline>
+        <failsafe.argline>${jacoco.argline}</failsafe.argline>
     </properties>
 
     <scm>
@@ -139,6 +144,7 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>2.22.2</version>
                     <configuration>
+                        <argLine>${surefire.argline}</argLine>
                         <forkCount>3</forkCount>
                         <reuseForks>true</reuseForks>
                         <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
