@@ -49,17 +49,17 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-ext</artifactId>
-            <version>${org.slf4j.version}</version>
+            <version>1.7.1</version>
         </dependency>
         <dependency>
             <groupId>org.codice.thirdparty</groupId>
             <artifactId>tika-bundle</artifactId>
-            <version>${tika.thirdparty.bundle.version}</version>
+            <version>1.18.0_5</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>${logback.classic.version}</version>
+            <version>1.2.3</version>
             <scope>test</scope>
         </dependency>
         <dependency>
