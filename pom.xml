@@ -58,6 +58,9 @@
         <directory-maven-plugin.version>0.3.1</directory-maven-plugin.version>
         <dependency-check-maven.version>3.1.1</dependency-check-maven.version>
         <maven-jacoco-plugin.version>0.8.2</maven-jacoco-plugin.version>
+        <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
+        <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
+        <jacoco-maven-plugin.version>0.8.4</jacoco-maven-plugin.version>
 
         <!-- Command line argument properties for the maven-surefire-plugin -->
         <surefire.argline.append />
@@ -145,8 +148,6 @@
                     <version>2.22.2</version>
                     <configuration>
                         <argLine>${surefire.argline}</argLine>
-                        <forkCount>3</forkCount>
-                        <reuseForks>true</reuseForks>
                         <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
                         <includes>
                             <include>**/*Test.java</include>
@@ -157,6 +158,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco-maven-plugin.version}</version>
                      <dependencies>
                         <dependency>
                             <groupId>org.codice.maven</groupId>
