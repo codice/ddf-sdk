@@ -13,6 +13,8 @@
  */
 package org.codice.ddf.sdk.validation.metacard;
 
+import static org.junit.Assert.assertTrue;
+
 import com.google.common.collect.ImmutableSet;
 import ddf.catalog.data.impl.MetacardImpl;
 import ddf.catalog.validation.ValidationException;
